@@ -1,0 +1,5 @@
+APPSRV_LOG %{WORD:process}\.%{NOTSPACE:pid}%{SPACE}(\(%{NUMBER:service_request}\))?%{SPACE}\[%{TIMESTAMP_ISO8601:datetime}( %{USER:username}\@%{DATA:client_machine})?(%{SPACE}\(%{DATA:useragent}\))?(%{SPACE}%{WORD:service}\)?)?\](%{SPACE}%{NOTSPACE:SRID}%{SPACE}%{NOTSPACE:TOPInstanceID}%{SPACE}%{USER:oprid})?%{SPACE}\(%{NUMBER:log_level}\)(%{SPACE}\(%WORD:service\):)?%{SPACE}%{GREEDYDATA:log_message}
+APPSRV_USER %{USER:username}@%{IP:clientip}
+CRASH PSPAL\:%{SPACE}%{GREEDYDATA:log_message}
+BAD_SQL Failed SQL stmt\:%{SPACE}%{GREEDYDATA:badsql}
+LOGIN_DATA %{DATA}%{SPACE}%{USER:username}@%{IP}

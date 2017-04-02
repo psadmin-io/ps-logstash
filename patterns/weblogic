@@ -1,0 +1,7 @@
+WL_TIMESTAMP %{YEAR:year}-%{MONTHNUM:month}-%{MONTHDAY:day}\t%{TIME:time}
+WL_IO_EXTENDED %{WL_TIMESTAMP:timestamp}%{SPACE}%{WORD:verb}%{SPACE}%{NOTSPACE:request}%{SPACE}%{NUMBER:response}%{SPACE}%{USER:auth}%{SPACE}%{QS:useragent}%{SPACE}%{WL_WEB_SERVER:webserver}%{SPACE}%{IP:clientip}%{SPACE}(\"%{IP:forwardedFor}\"|%{DATA:forwardedFor})%{SPACE}%{NUMBER:duration}%{SPACE}%{NUMBER:bytes}(%{SPACE}%{USER:oprid})?
+WL_WEB_SERVER (\[%{IPORHOST:server}\]:%{POSINT:port})|(%{IPORHOST:server}:%{NUMBER:port})
+PS_COMPONENT %{WORD:componentName}\.%{WORD:market}
+PS_WEBLIB %{WORD:weblibRec}\.%{WORD:weblibField}\.%{WORD:weblibEvent}\.%{WORD:weblibFunc}
+PS_URI_REQUEST %{WORD:servlet}(/%{WORD:site_name})?(/%{WORD:portal}/%{WORD:node}/)?(%{WORD:content_type}/(%{PS_WEBLIB:iscript}|%{WORD:menu}\.%{PS_COMPONENT:component})?)?(\?%{GREEDYDATA:query_string})?
+SERVLET_LOG %{TIMESTAMP_ISO8601:timestamp}%{SPACE}%{NUMBER:seq_num}%{SPACE}%{NUMBER:thread_id}%{SPACE}%{NUMBER:logging_group}%{SPACE}%{NOTSPACE:SRID}%{SPACE}%{NOTSPACE:TOPInstanceID}%{SPACE}%{USER:oprid}%{SPACE}%{WORD:log_level}%{SPACE}%{NOTSPACE:java_class}%{SPACE}%{NOTSPACE:java_method}%{SPACE}%{GREEDYDATA:log_message}
