@@ -1,0 +1,1 @@
+Start-Process -FilePath e:\elk\nssm.exe -ArgumentList 'install logstash-5.4.0 "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-command "& { e:\elk\5.4\logstash-5.4.0\start_logstash.ps1 }"" ' -NoNewWindow -Wait
