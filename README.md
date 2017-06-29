@@ -5,3 +5,7 @@
 
 
 Tutorial from Digital Ocean on setting up your Elastic Stack to collect logs: https://www.digitalocean.com/community/tutorial_series/centralized-logging-with-elk-stack-elasticsearch-logstash-and-kibana-on-ubuntu-14-04
+
+For the WebLogic Access Log, use the Extended Logging Format with this string:
+
+    date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField
