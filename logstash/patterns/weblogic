@@ -1,5 +1,5 @@
 WL_TIMESTAMP %{YEAR:year}-%{MONTHNUM:month}-%{MONTHDAY:day}\t%{TIME:time}
-WL_IO_EXTENDED %{WL_TIMESTAMP:timestamp}%{SPACE}%{WORD:verb}%{SPACE}%{NOTSPACE:request}%{SPACE}%{NUMBER:response}%{SPACE}%{USER:auth}%{SPACE}(%{QS:useragent}|%{NOTSPACE:useragent})%{SPACE}%{WL_WEB_SERVER:webserver}%{SPACE}%{IP:clientip}%{SPACE}(\"%{IP:forwardedFor}\"|%{DATA:forwardedFor})%{SPACE}%{NUMBER:duration}%{SPACE}%{NUMBER:bytes}(%{SPACE}%{USER:oprid})?
+WL_IO_EXTENDED %{WL_TIMESTAMP:timestamp}%{SPACE}%{WORD:verb}%{SPACE}%{NOTSPACE:request}%{SPACE}%{NUMBER:response}%{SPACE}%{USER:auth}%{SPACE}(%{QS:useragent}|%{NOTSPACE:useragent})%{SPACE}%{WL_WEB_SERVER:webserver}%{SPACE}%{IP:clientip}%{SPACE}(\"%{IP:forwardedFor}\"|%{DATA:forwardedFor})%{SPACE}%{NUMBER:duration}%{SPACE}%{NUMBER:bytes}(%{SPACE}%{USER:oprid})?(%{SPACE}%{QS:referer})?
 WL_WEB_SERVER (\[%{IPORHOST:server}\]:%{POSINT:port})|(%{IPORHOST:server}:%{NUMBER:port})
 PS_COMPONENT %{WORD:componentName}\.%{WORD:market}
 PS_WEBLIB %{WORD:weblibRec}\.%{WORD:weblibField}\.%{WORD:weblibEvent}\.%{WORD:weblibFunc}
