@@ -5,3 +5,4 @@ BAD_SQL Failed SQL stmt\:%{SPACE}%{GREEDYDATA:badsql}
 LOGIN_DATA %{DATA}%{SPACE}%{USER:username}@%{IP}
 APP_QUEUE %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NUMBER:active_processes}%{SPACE}%{DATA:queued_work}%{SPACE}%{NUMBER:queued_requests}%{SPACE}%{DATA:average_queue}%{SPACE}%{GREEDYDATA:machine}
 APP_REQUEST %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NOTSPACE:group_name}%{SPACE}%{NUMBER:id}%{SPACE}%{NUMBER:requests_done}%{SPACE}%{NUMBER:load_done}%{SPACE}(\()?%{SPACE}%{WORD:process_status}%{SPACE}(\))?
+EXEC_COMP %{WORD}%{SPACE}%{WORD}%{SPACE}%{WORD:componentName}\/%{WORD:market}%{SPACE}%{WORD}%{SPACE}%{WORD}%{SPACE}%{WORD:menu}
