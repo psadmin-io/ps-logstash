@@ -9,3 +9,5 @@ Tutorial from Digital Ocean on setting up your Elastic Stack to collect logs: ht
 For the WebLogic Access Log, use the Extended Logging Format with this string:
 
     date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField cs(referer)
+
+For more information on the Extended Log Format fields, see the [W3C documentation](https://www.w3.org/TR/WD-logfile.html)
