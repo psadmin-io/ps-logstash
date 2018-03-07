@@ -17,3 +17,8 @@ WLS_SRV_LOG %{WLS_SRV_LOG_FMT1}|%{WLS_SRV_LOG_FMT2}
 WLS_APP_LOG_FMT1 %{WL_LOG_TIMESTAMP:timestamp}(?: %{NUMBER:some_id})? %{WORD:severity} ( )?\[%{JAVACLASS:java_class}\](:)?( \(\[%{DATA:thread_status}\] ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}':\))? %{DATA:log_message}$
 WLS_APP_LOG_FMT2 %{WL_LOG_TIMESTAMP:timestamp}(?: %{NUMBER:some_id})? %{WORD:severity} ( )?\[%{JAVACLASS:java_class}\](:)? %{GREEDYDATA:log_message}
 WLS_APP_LOG %{WLS_APP_LOG_FMT1}|%{WLS_APP_LOG_FMT1}
+
+# Grey Heller Logs
+# BETA
+GH_TIMESTAMP %{YEAR:year}-%{MONTHNUM:month}-%{MONTHDAY:day}%{SPACE}%{TIME:time}
+GH_LOG %{GH_TIMESTAMP:timestamp}\,%{WORD}\,%{DATA:session}\,%{USER:oprid}\@%{DATA:domain}\,%{IPV4:ipaddress}\,%{WORD:method}\,%{DATA:menu}\,%{DATA:component}\,%{DATA:page}\,%{DATA:keys}\,%{DATA:ICAction}\,%{SPACE}%{NOTSPACE:url}\,%{DATA:devicetype}\,%{DATA:rendermode}\,%{DATA:useragent}\,%{DATA:physicalhost}\,%{DATA:webappdomain}\,%{NUMBER:elapsedseconds}
