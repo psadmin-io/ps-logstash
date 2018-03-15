@@ -2,8 +2,8 @@ APPSRV_LOG %{WORD:process}\.%{NOTSPACE:pid}%{SPACE}(\(%{NUMBER:service_request}\
 APPSRV_USER %{USER:username}@%{IP:clientip}
 CRASH PSPAL\:%{SPACE}%{GREEDYDATA:log_message}
 BAD_SQL Failed SQL stmt\:%{SPACE}%{GREEDYDATA:badsql}
-LOGIN_DATA %{DATA}%{SPACE}%{USER:username}@%{IP}
+LOGIN_DATA %{DATA}%{SPACE}%{USER:username}@(%{IP:client}|%{WORD:client})
 APP_QUEUE %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NUMBER:active_processes}%{SPACE}%{DATA:queued_work}%{SPACE}%{NUMBER:queued_requests}%{SPACE}%{DATA:average_queue}%{SPACE}%{GREEDYDATA:machine}
 APP_REQUEST %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NOTSPACE:group_name}%{SPACE}%{NUMBER:id}%{SPACE}%{NUMBER:requests_done}%{SPACE}%{NUMBER:load_done}%{SPACE}(\()?%{SPACE}%{WORD:process_status}%{SPACE}(\))?
-EXEC_COMP %{WORD}%{SPACE}%{WORD}%{SPACE}%{WORD:componentName}\/%{WORD:market}%{SPACE}%{WORD}%{SPACE}%{WORD}%{SPACE}%{WORD:menu}
+EXEC_COMP Executing%{SPACE}component%{SPACE}%{WORD:componentName}\/%{WORD:market}%{SPACE}in%{SPACE}menu%{SPACE}%{WORD:menu}
 SERVICE_DUR %{WORD}%{SPACE}%{WORD:service}%{SPACE}%{WORD}:%{SPACE}%{WORD}%{SPACE}%{WORD}=%{BASE16FLOAT:duration}
