@@ -11,7 +11,8 @@ WL_LOG_TIMESTAMP %{MONTH:month}%{SPACE}%{MONTHDAY:day},%{SPACE}%{YEAR:year}%{SPA
 # server logs
 WLS_SRV_LOG_FMT1 ####<%{WL_LOG_TIMESTAMP:timestamp}> <%{WORD:severity}> <%{DATA:wls_topic}> <%{IPORHOST:server}> <(%{WORD:wlserver})?>( <(\[%{DATA:thread_status}\] )?ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}'>)? %{GREEDYDATA:log_message}
 WLS_SRV_LOG_FMT2 ####<%{WL_LOG_TIMESTAMP:timestamp}> <%{WORD:severity}> <%{DATA:wls_topic}> <%{IPORHOST:server}> <(%{WORD:wlserver})?> %{GREEDYDATA:log_message}
-WLS_SRV_LOG %{WLS_SRV_LOG_FMT1}|%{WLS_SRV_LOG_FMT2}
+WLS_SRV_LOG_FMT3 ####<%{WL_LOG_TIMESTAMP:timestamp}>%{SPACE}<%{WORD:severity}>%{SPACE}<%{DATA:subsystem}>%{SPACE}<%{IPORHOST:server}>%{SPACE}<(%{WORD:server_name})?>%{SPACE}(<%{NOTSPACE:threadid}>%{SPACE}<<%{WORD:wls_user}>>%{SPACE}<>%{SPACE}<%{NOTSPACE:diagnostic_context}>%{SPACE}<%{WORD:rawtimevalue}>%{SPACE}<%{GREEDYDATA:wls_code}>%{SPACE}<%{NOTSPACE:message_id}>)?%{SPACE}<%{GREEDYDATA:log_message}>
+WLS_SRV_LOG %{WLS_SRV_LOG_FMT3}|%{WLS_SRV_LOG_FMT2}|%{WLS_SRV_LOG_FMT1}
 
 # application logs
 WLS_APP_LOG_FMT1 %{WL_LOG_TIMESTAMP:timestamp}(?: %{NUMBER:some_id})? %{WORD:severity} ( )?\[%{JAVACLASS:java_class}\](:)?( \(\[%{DATA:thread_status}\] ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}':\))? %{DATA:log_message}$
