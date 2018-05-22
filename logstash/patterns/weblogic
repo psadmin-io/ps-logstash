@@ -6,18 +6,19 @@ PS_WEBLIB %{WORD:weblibRec}\.%{WORD:weblibField}\.%{WORD:weblibEvent}\.%{WORD:we
 PS_URI_REQUEST %{WORD:servlet}(/%{WORD:site_name})?(/%{WORD:portal}/%{WORD:node}/)?(%{WORD:content_type}/(%{PS_WEBLIB:iscript}|%{WORD:menu}\.%{PS_COMPONENT:component})?)?(\?%{GREEDYDATA:query_string})?
 SERVLET_LOG %{TIMESTAMP_ISO8601:timestamp}%{SPACE}%{NUMBER:seq_num}%{SPACE}%{NUMBER:thread_id}%{SPACE}%{NUMBER:logging_group}%{SPACE}%{NOTSPACE:SRID}%{SPACE}%{NOTSPACE:TOPInstanceID}%{SPACE}%{USER:oprid}%{SPACE}%{WORD:log_level}%{SPACE}%{NOTSPACE:java_class}%{SPACE}%{NOTSPACE:java_method}%{SPACE}%{GREEDYDATA:log_message}
 
-WL_LOG_TIMESTAMP %{MONTH:month}%{SPACE}%{MONTHDAY:day},%{SPACE}%{YEAR:year}%{SPACE}%{TIME:time}%{SPACE}%{WORD:halfday}%{SPACE}%{TZ:timezone}
+WL_LOG_TIMESTAMP %{MONTH:month}%{SPACE}%{MONTHDAY:day},%{SPACE}%{YEAR:year},%{SPACE}%{TIME:time}%{SPACE}%{WORD:halfday}%{SPACE}%{TZ:timezone}
 # from https://kuther.net/blog/indexing-and-searching-weblogic-logs-using-logstash-elasticsearch-and-kibana
 # server logs
 WLS_SRV_LOG_FMT1 ####<%{WL_LOG_TIMESTAMP:timestamp}> <%{WORD:severity}> <%{DATA:wls_topic}> <%{IPORHOST:server}> <(%{WORD:wlserver})?>( <(\[%{DATA:thread_status}\] )?ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}'>)? %{GREEDYDATA:log_message}
 WLS_SRV_LOG_FMT2 ####<%{WL_LOG_TIMESTAMP:timestamp}> <%{WORD:severity}> <%{DATA:wls_topic}> <%{IPORHOST:server}> <(%{WORD:wlserver})?> %{GREEDYDATA:log_message}
-WLS_SRV_LOG_FMT3 ####<%{WL_LOG_TIMESTAMP:timestamp}>%{SPACE}<%{WORD:severity}>%{SPACE}<%{DATA:subsystem}>%{SPACE}<%{IPORHOST:server}>%{SPACE}<(%{WORD:server_name})?>%{SPACE}(<%{NOTSPACE:threadid}>%{SPACE}<<%{WORD:wls_user}>>%{SPACE}<>%{SPACE}<%{NOTSPACE:diagnostic_context}>%{SPACE}<%{WORD:rawtimevalue}>%{SPACE}<%{GREEDYDATA:wls_code}>%{SPACE}<%{NOTSPACE:message_id}>)?%{SPACE}<%{GREEDYDATA:log_message}>
+WLS_SRV_LOG_FMT3 ####<%{WL_LOG_TIMESTAMP:timestamp}>%{SPACE}<%{WORD:severity}>%{SPACE}<%{DATA:subsystem}>%{SPACE}<%{IPORHOST:server}>%{SPACE}<(%{WORD:server_name})?>%{SPACE}((<%{NOTSPACE:threadid}>)|(<(\[%{DATA:thread_status}\] )?ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}'>)%{SPACE}<<%{WORD:wls_user}>>%{SPACE}<>%{SPACE}<%{NOTSPACE:diagnostic_context}>%{SPACE}<%{WORD:rawtimevalue}>%{SPACE}<%{GREEDYDATA:wls_code}>%{SPACE}<%{NOTSPACE:message_id}>)?%{SPACE}<%{GREEDYDATA:log_message}>
 WLS_SRV_LOG %{WLS_SRV_LOG_FMT3}|%{WLS_SRV_LOG_FMT2}|%{WLS_SRV_LOG_FMT1}
 
 # application logs
 WLS_APP_LOG_FMT1 %{WL_LOG_TIMESTAMP:timestamp}(?: %{NUMBER:some_id})? %{WORD:severity} ( )?\[%{JAVACLASS:java_class}\](:)?( \(\[%{DATA:thread_status}\] ExecuteThread: '%{INT:thread_nr}' for queue: '%{DATA:thread_queue}':\))? %{DATA:log_message}$
 WLS_APP_LOG_FMT2 %{WL_LOG_TIMESTAMP:timestamp}(?: %{NUMBER:some_id})? %{WORD:severity} ( )?\[%{JAVACLASS:java_class}\](:)? %{GREEDYDATA:log_message}
 WLS_APP_LOG %{WLS_APP_LOG_FMT1}|%{WLS_APP_LOG_FMT1}
+
 
 # Grey Heller Logs
 # BETA
