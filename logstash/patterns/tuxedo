@@ -1,9 +1,9 @@
-APPSRV_LOG %{WORD:process}\.%{NOTSPACE:pid}%{SPACE}(\(%{NUMBER:service_request}\))?%{SPACE}\[%{TIMESTAMP_ISO8601:datetime}( %{USER:username}\@%{DATA:client_machine})?(%{SPACE}\(%{DATA:useragent}\))?(%{SPACE}%{WORD:service}\)?)?\](%{SPACE}%{NOTSPACE:SRID}%{SPACE}%{NOTSPACE:TOPInstanceID}%{SPACE}%{USER:oprid})?%{SPACE}\(%{NUMBER:log_level}\)(%{SPACE}\(%WORD:service\):)?%{SPACE}%{GREEDYDATA:log_message}
-APPSRV_USER %{USER:username}@%{IP:clientip}
+APPSRV_LOG %{WORD:process}\.%{NOTSPACE:pid}%{SPACE}(\(%{NUMBER:service_request}\))?%{SPACE}\[%{TIMESTAMP_ISO8601:app_timestamp}(%{SPACE}%{APPSRV_USER})?(%{SPACE}\(%{DATA:useragent}\))?(%{SPACE}%{WORD:service})?\](%{SPACE}%{NOTSPACE:SRID}%{SPACE}%{NOTSPACE:TOPInstanceID}%{SPACE}%{USER:oprid})?%{SPACE}\(%{NUMBER:log_level}\)(%{SPACE}\(%WORD:service\):)?%{SPACE}%{GREEDYDATA:log_message}
+APPSRV_USER (%{USER:oprid})?\@(%{IP:client_machine}|%{NOTSPACE:client_machine})
 CRASH PSPAL\:%{SPACE}%{GREEDYDATA:log_message}
 BAD_SQL Failed SQL stmt\:%{SPACE}%{GREEDYDATA:badsql}
-LOGIN_DATA %{DATA}%{SPACE}%{USER:username}@(%{IP:client}|%{WORD:client})
-APP_QUEUE %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NUMBER:active_processes}%{SPACE}%{DATA:queued_work}%{SPACE}%{NUMBER:queued_requests}%{SPACE}%{DATA:average_queue}%{SPACE}%{GREEDYDATA:machine}
-APP_REQUEST %{TIMESTAMP_ISO8601:datetime}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NOTSPACE:group_name}%{SPACE}%{NUMBER:id}%{SPACE}%{NUMBER:requests_done}%{SPACE}%{NUMBER:load_done}%{SPACE}(\()?%{SPACE}%{WORD:process_status}%{SPACE}(\))?
+LOGIN_DATA %{DATA}%{SPACE}%{APPSRV_USER}
+APP_QUEUE %{TIMESTAMP_ISO8601:app_timestamp}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NUMBER:active_processes}%{SPACE}%{DATA:queued_work}%{SPACE}%{NUMBER:queued_requests}%{SPACE}%{DATA:average_queue}%{SPACE}%{GREEDYDATA:machine}
+APP_REQUEST %{TIMESTAMP_ISO8601:app_timestamp}%{SPACE}%{WORD:process}.%{NOTSPACE:extention}%{SPACE}%{NOTSPACE:queue}%{SPACE}%{NOTSPACE:group_name}%{SPACE}%{NUMBER:id}%{SPACE}%{NUMBER:requests_done}%{SPACE}%{NUMBER:load_done}%{SPACE}(\()?%{SPACE}%{WORD:process_status}%{SPACE}(\))?
 EXEC_COMP Executing%{SPACE}component%{SPACE}%{WORD:componentName}\/%{WORD:market}%{SPACE}in%{SPACE}menu%{SPACE}%{WORD:menu}
 SERVICE_DUR %{WORD}%{SPACE}%{WORD:service}%{SPACE}%{WORD}:%{SPACE}%{WORD}%{SPACE}%{WORD}=%{BASE16FLOAT:duration}
