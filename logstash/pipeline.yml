@@ -1,0 +1,4 @@
+- pipeline.id: access
+  path.config: "/etc/logstash/conf.d/accesslog.conf"
+- pipeline.id: appserv
+  path.config: "/etc/logstash/conf.d/appserv.conf"
