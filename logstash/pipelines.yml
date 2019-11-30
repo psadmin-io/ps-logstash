@@ -1,4 +1,6 @@
-- pipeline.id: access
-  path.config: "/etc/logstash/conf.d/accesslog.conf"
-- pipeline.id: appserv
-  path.config: "/etc/logstash/conf.d/appserv.conf"
+- pipeline.id: main
+  path.config: "/etc/logstash/conf.d/*.conf"
+# Single Pipeline until this bug is fixed
+# https://github.com/elastic/logstash/issues/10886
+# - pipeline.id: appserv
+#   path.config: "/etc/logstash/conf.d/appserv.conf"
