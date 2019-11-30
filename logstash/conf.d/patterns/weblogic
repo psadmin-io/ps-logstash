@@ -24,3 +24,6 @@ WLS_APP_LOG %{WLS_APP_LOG_FMT1}|%{WLS_APP_LOG_FMT1}
 # BETA
 GH_TIMESTAMP %{YEAR:year}-%{MONTHNUM:month}-%{MONTHDAY:day}%{SPACE}%{TIME:time}
 GH_LOG %{GH_TIMESTAMP:timestamp}\,%{WORD}\,%{DATA:session}\,%{USER:oprid}\@%{DATA:domain}\,%{IPV4:ipaddress}\,%{WORD:method}\,%{DATA:menu}\,%{DATA:component}\,%{DATA:page}\,%{DATA:keys}\,%{DATA:ICAction}\,%{SPACE}%{NOTSPACE:url}\,%{DATA:devicetype}\,%{DATA:rendermode}\,%{DATA:useragent}\,%{DATA:physicalhost}\,%{DATA:webappdomain}\,%{NUMBER:elapsedseconds}
+
+# GC Messages
+WLS_GC_MESSAGE %{NUMBER:heap_free}\% of the total memory in the server is free.
