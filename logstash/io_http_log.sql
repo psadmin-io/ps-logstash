@@ -10,7 +10,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "lab-hcm-win",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'portal',
@@ -18,7 +19,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "EMPLOYEE",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'wl_timestamp',
@@ -26,7 +28,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "2022-05-10\t06:34:26",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'request',
@@ -34,7 +37,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "/psc/ps/EMPLOYEE/HRMS/c/PTEXTDATAMENU.PTEXTMAINSRC_COMP.GBL?NavColl=true&amp;ICAJAX=1&amp;ICAGTarget=start&amp;ICPanelControlStyle=pst_side1-fixed&#37;20pst_panel-mode&#37;20",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'webserver',
@@ -42,7 +46,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "127.0.0.1:8000",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'content_type',
@@ -50,7 +55,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "c",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'auth',
@@ -58,8 +64,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "-",
-          --Insert into PS_PTEXTSRCDEFN_R values ('IO_HTTP_LOG', 'datetime', '04', ' ', 'Web Server Logs', ' '); -- => "2022-05-10 06:34:26",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'duration',
@@ -67,7 +73,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => 0.166,
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'bytes',
@@ -75,7 +82,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "3211",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'minor',
@@ -83,7 +91,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "0",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'os',
@@ -91,7 +100,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "Windows",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'servlet',
@@ -99,7 +109,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "psc",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'major',
@@ -107,7 +118,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "100",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'forwardedFor',
@@ -115,7 +127,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "-",
+);
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'useragent',
@@ -123,7 +136,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\"",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'component',
@@ -131,7 +145,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "PTEXTMAINSRC_COMP.GBL",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'verb',
@@ -139,7 +154,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "GET",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'port',
@@ -147,7 +163,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "8000",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'day',
@@ -155,7 +172,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "10",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'path',
@@ -163,7 +181,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "c:/psft/cfg/webserv/peoplesoft/servers/PIA/logs/PIA_access.LOG",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'device',
@@ -171,7 +190,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "Other",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'response',
@@ -179,7 +199,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "200",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'node',
@@ -187,7 +208,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "HRMS",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'name',
@@ -195,7 +217,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "Firefox",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'month',
@@ -203,7 +226,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "05",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'menu',
@@ -211,7 +235,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "PTEXTDATAMENU",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'server',
@@ -219,7 +244,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "127.0.0.1",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'componentName',
@@ -227,8 +253,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "PTEXTMAINSRC_COMP",
-              --Insert into PS_PTEXTSRCDEFN_R values ('IO_HTTP_LOG', 'time', '04', ' ', 'Web Server Logs', ' '); -- => "06:34:26",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'os_name',
@@ -236,7 +262,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "Windows",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'oprid',
@@ -244,7 +271,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "-",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'market',
@@ -252,7 +280,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "GBL",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'site',
@@ -260,7 +289,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "ps",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'log_line',
@@ -268,7 +298,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "2022-05-10\t06:34:26\tGET\t/psc/ps/EMPLOYEE/HRMS/c/PTEXTDATAMENU.PTEXTMAINSRC_COMP.GBL?NavColl=true&amp;ICAJAX=1&amp;ICAGTarget=start&amp;ICPanelControlStyle=pst_side1-fixed&#37;20pst_panel-mode&#37;20\t200\t-\t\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\"\t127.0.0.1:8000\t127.0.0.1\t-\t0.166\t3211\t-\t\"http://hr.lab.psadmin.oraclevcn.com:8000/psc/ps/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_AGSTARTPAGE_NUI.GBL?CONTEXTIDPARAMS=TEMPLATE_ID:PTPPNAVCOL&scname=EP_EXTERNAL_DATA&PanelCollapsible=N&%20AJAXTransfer=Y&CRefName=NAVCOLOPT&cmd=uninav\"\r",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'message',
@@ -276,7 +307,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "2022-05-10\t06:34:26\tGET\t/psc/ps/EMPLOYEE/HRMS/c/PTEXTDATAMENU.PTEXTMAINSRC_COMP.GBL?NavColl=true&amp;ICAJAX=1&amp;ICAGTarget=start&amp;ICPanelControlStyle=pst_side1-fixed&#37;20pst_panel-mode&#37;20\t200\t-\t\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0\"\t127.0.0.1:8000\t127.0.0.1\t-\t0.166\t3211\t-\t\"http://hr.lab.psadmin.oraclevcn.com:8000/psc/ps/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_AGSTARTPAGE_NUI.GBL?CONTEXTIDPARAMS=TEMPLATE_ID:PTPPNAVCOL&scname=EP_EXTERNAL_DATA&PanelCollapsible=N&%20AJAXTransfer=Y&CRefName=NAVCOLOPT&cmd=uninav\"\r",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'build',
@@ -284,7 +316,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'year',
@@ -292,7 +325,8 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "2022",
+); 
+
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
     'query_string',
@@ -300,7 +334,7 @@ INSERT INTO ps_ptextsrcdefn_r VALUES (
     ' ',
     'Web Server Logs',
     ' '
-); -- => "NavColl=true&amp;ICAJAX=1&amp;ICAGTarget=start&amp;ICPanelControlStyle=pst_side1-fixed&#37;20pst_panel-mode&#37;20"
+); 
 
 INSERT INTO ps_ptextsrcdefn_r VALUES (
     'IO_HTTP_LOG',
